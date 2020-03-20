@@ -1,0 +1,72 @@
+{
+int main()
+    char name[30];
+    cout << "chose your name?" << endl;
+    cin.getline(name, 50);
+    std::cout << "This is footballl manager, " << name << ". You are welcome." << endl;
+   std :: cout << "\n press ok to start" << endl;
+   
+    return 0;
+}
+
+
+
+bool isbigger (string Character )
+{
+  bool status = true;
+  if (Character.length() > 10)
+  {
+    status = false; 
+  }
+  return status;
+ 
+}
+
+int main ()
+{
+  string name;
+  cout << "Enter your username ";
+  cin >> name;¬
+  
+  
+  if (isbigger(name) == 1)
+  {
+    cout << "Charceter created";
+  }
+  else
+  {
+    
+   for(int i=0; i<10; i++){
+      cout<<name[i];
+   }
+    cout << endl;
+  }
+  
+  return 0;
+} 
+
+
+
+int health ()
+  health = 20;
+  
+
+  
+  int main () {
+    enemylist(){
+ 
+   if(enemylist == Dwarf ) {
+      
+ cout<< "This character exists" << endl;
+   } else if( enemylist == Goblin ) {
+      cout << "This character exists" << endl;
+   } else if( enemylist == Wizards ) {
+      cout << "This character exists" << endl;
+   } 
+else {
+      cout << "Character of enemy is not matching" << endl;
+   }  
+    }
+   return 0;    
+}
+
