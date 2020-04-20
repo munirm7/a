@@ -14,7 +14,8 @@ def send_email():
     server.sendmail(userName, receivers, message)                             #sending an email to the reciever 
     server.quit()                                                             #logs out of the saver
                                                                               
-               #codes gotten from https://www.afternerd.com/blog/how-to-send-an-email-using-python-and-smtplib//  
+               #codes gotten from https://www.afternerd.com/blog/how-to-send-an-email-using-python-and-smtplib//
+               #also watched a video from https://www.youtube.com/watch?v=qHyE4YAFIv0
     
      
 ans=True
