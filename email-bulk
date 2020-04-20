@@ -1,0 +1,39 @@
+import smtplib, sys                                                           #calling the smtp library
+receivers=["umbpython@gmail.com","umbpython@gmail.com"]                  #list of recievers 
+
+def send_email():                                                            
+    userName = input("Enter your email: ")                                    # sender's email address
+    passWord = input("Enter your password: ")                                 #sender's password
+    message = input("what do you have to say today: ")                        #messege that the receivers get
+
+
+    server = smtplib.SMTP_SSL('smtp.gmail.com', 465)                          #connecting the gmail and smtp server
+    server.login(userName, passWord)                                          #giving your log in details, gotten from https://www.afternerd.com/blog/how-to-send-an-email-using-python-and-smtplib/
+
+  
+    server.sendmail(userName, receivers, message)                             #sending an email to the reciever 
+    server.quit()                                                             #logs out of the saver
+                                                                              
+               #codes gotten from https://www.afternerd.com/blog/how-to-send-an-email-using-python-and-smtplib//  
+    
+     
+ans=True
+while ans:                                                                    #used a while loop for the menu
+    print("1.Add an email\n2.Remove email\n3.Send an email\n4.Exit")
+    ans=input("Choose any of the options: ") 
+    if ans=="1":
+      x=input("Enter your email address to be added: ")
+      receivers.append(x)                                                     #code that adds email to the list    
+      print("\n Email Added") 
+    elif ans=="2":
+       x=input("Enter the email username you want to be remove: ")
+       receivers.remove(x)                                                    #code to remove email from the list   
+       print("\n Email has been removed") 
+    elif ans=="3":
+      send_email()                                                            #calls the function send_email which was defined earlier 
+      print("\n Email sent") 
+    elif ans=="4":
+      sys.exit(0)                                                             #code ending the program    
+      print("\n Goodbye") 
+    elif ans !="":
+      print("\n Invalid, Try again later")                                 
